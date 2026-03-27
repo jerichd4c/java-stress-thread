@@ -5,7 +5,7 @@
     <img src="https://raw.githubusercontent.com/jerichd4c/Proyecto_DBcomponent/main/java_logo.svg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">java-stress-thread</h3>
+  <h3 align="center">Java Stress Thread</h3>
 
   <p align="center">
     A minimalist Java tool for executing database stress tests over JDBC configurations.
@@ -31,7 +31,7 @@
 
 ## About The Project
 
-java-stress-thread is a lightweight demonstration repository that features a multithreaded stress testing class designed to evaluate database connection logic.
+This is a ightweight demonstration repository that features a multithreaded stress testing class designed to evaluate database connection logic.
 
 ### Key Features:
 * **Multithreading**: Employs Java Threads to simulate concurrent database accesses.
