@@ -1,3 +1,5 @@
+package pruebaestres.core;
+
 import java.sql.*;
 
 public class PruebaDeEstres {

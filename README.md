@@ -1,35 +1,84 @@
-Proyecto relacionado a la materia Programacion visual en URU.
+<a id="readme-top"></a>
 
-1. Descripcion
-   
-Codigo hecho en Java que simula la prueba de estres y caida de una base de datos generica en postgreSQL usando hilos.
+<div align="center">
+  <a href="https://github.com/jerichd4c/Proyecto_PruebaEstres">
+    <img src="https://raw.githubusercontent.com/jerichd4c/Proyecto_DBcomponent/main/java_logo.svg" alt="Logo" width="80" height="80">
+  </a>
 
-2. Metodos disponibles
+  <h3 align="center">java-stress-thread</h3>
 
-    * asignarDatosDB: metodo utilizado para asignar los datos del postgreSQL (puerto, nombre de BD, usuario)
-      
-    * verificarConexion: metodo que realiza una sentencia try-catch para realizar la conexion a la base de datos usando los datos de la funcion "asignarDatosBD" si son correctos se conecta, si no se muestra
-    en la consola la razon de por que fallo la conexion.
+  <p align="center">
+    A minimalist Java tool for executing database stress tests over JDBC configurations.
+  </p>
+</div>
 
-    * crearTablaPrueba: metodo que una vez conectado a la base de datos, crea la tabla con los campos "id" y "descript" (este ultimo con una capacidad de 10000 caracteres VARCHAR)
-      NT: si existe una tabla anterior a esta o se vuelve a correr el programa, borrara la tabla anterior para hacer la prueba de estres desde 0.
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-    * asignarNUM_Conexiones: metodo utilizado para realizar el numero de consultas (conexiones) que se quieren hacer a la BDD.
-  
-    * pruebaDeEstres: metodo principal de la prueba, creara la N cantidad de hilos usando un runnable "new Thread(()-> {]).start()" (clase lambda) y llevara el control de los hilos perdidos y procesados con un contador
-      que se almaceran en las variables de control globables (Static). Durante la ejecucion mostrara la informacion de cada hilo por separado (NRO HILO, tiempo de creacion, tiempo de finalizacion)
+## About The Project
 
-    * mostrarResumen: muestra el resumen final de la prueba de estres con: Hilos; perdidos y procesados; totales y el tiempo de duracion de la prueba en general.
-  
-3. Requisitos para ejecutar el codigo
+java-stress-thread is a lightweight demonstration repository that features a multithreaded stress testing class designed to evaluate database connection logic.
 
-   A. un IDE que soporte java (Eclipse, Vscode, Netbeans)
-   B. jdk (Java Development Kit, adquirir de la pagina oficial de ORACLE™)
-   C. archivo del driver jdbc (Java database connectivity) (importante para realizar la conectividad a postgreSQL)
-   D. postgreSQL configurado y con una base de datos ya creada (puede estar vacio, lo importante es que la BDD exista)
+### Key Features:
+* **Multithreading**: Employs Java Threads to simulate concurrent database accesses.
+* **Minimalist Design**: Zero external dependencies (other than your JDBC driver).
 
-NT: este proyecto se realizo sin repositorio de GITHUB, por eso solo existe un solo commit, lo quise subir a un repositorio ya que este proyecto sera la base de otro proyecto de la materia.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Getting Started
 
-   
-   
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+* Java JDK 11 or higher
+* PostgreSQL Database
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/jerichd4c/Proyecto_PruebaEstres.git
+   ```
+2. Download the [PostgreSQL JDBC Driver](https://jdbc.postgresql.org/download/).
+3. **Mandatory Step**: Place the `.jar` file in your project root and **add it to your project's classpath** in your IDE:
+    * **VS Code**: Go to the "Java Projects" view, find "Referenced Libraries", click the `+` icon, and select the `.jar` file in your project root.
+    * **IntelliJ IDEA**: Go to `File -> Project Structure -> Libraries`, click `+`, select `Java`, and pick the `.jar` file in the project root.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Usage
+
+```java
+import pruebaestres.core.*;
+
+// Run the static main method to begin the evaluation
+PruebaDeEstres.main(new String[]{});
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## License
+
+Distributed under the MIT License.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Acknowledgments
+* [PostgreSQL JDBC Driver](https://jdbc.postgresql.org/download/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
