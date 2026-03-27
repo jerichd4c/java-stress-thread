@@ -39,6 +39,13 @@ java-stress-thread is a lightweight demonstration repository that features a mul
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Built With
+
+* [![Java][Java-shield]][Java-url]
+* [![PostgreSQL][PostgreSQL-shield]][PostgreSQL-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Getting Started
 
 To get a local copy up and running, follow these steps.
@@ -82,3 +89,9 @@ Distributed under the MIT License.
 * [PostgreSQL JDBC Driver](https://jdbc.postgresql.org/download/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[Java-shield]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white
+[Java-url]: https://www.java.com/
+[PostgreSQL-shield]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
+[PostgreSQL-url]: https://www.postgresql.org/
